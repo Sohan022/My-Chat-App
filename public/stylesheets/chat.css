@@ -1,0 +1,135 @@
+i.icon{
+      font-size: 2em;
+  }
+
+#mainMargin{
+      margin-bottom: 3.0em;
+}
+   
+.ui.menu {
+    position: sticky;
+    top:0;
+}
+
+
+/* * { 
+      margin: 0; 
+      padding: 0; 
+      box-sizing: border-box; 
+} */
+      
+body { 
+      font: 13px Helvetica, Arial;
+}
+      
+#msg-form { 
+      background: rgb(130, 138, 255); 
+      padding: 3px; position: fixed; 
+      bottom: 1px; 
+      width: 69%;
+      border-radius: 20px 0 0 20px;
+}
+      
+#msg-input { 
+      border: 0; 
+      padding: 10px; 
+      border-radius: 20px 0 0 20px;
+      font-size: 15px;
+      width: 92%;
+}
+      
+#msg-button {  
+      
+      background: rgb(130, 138, 255); 
+      border: none;
+}
+/* 
+#button-div{
+      display: inline;
+      min-width: 20px;
+}
+
+#input-div{
+      display: inline;
+} */
+
+#messages { 
+      list-style-type: none; 
+      margin: 0; 
+      padding: 0; 
+}
+
+.sender{
+      width: 80%;
+      float: right;
+      background-color: #ccc;
+      padding: 10px;
+      border-radius: 30px;
+      margin-bottom: 10px;
+}
+
+.receiver{
+      width: 80%;
+      float: left;
+      background: #eee; 
+      padding: 10px;
+      border-radius: 30px;
+      margin-bottom: 10px;
+
+}
+
+.msg-content{
+      font-size: 20px;
+}
+
+.user-info{
+      font-size: 16px;
+      margin-bottom: 0;
+}
+
+.time{
+      float: right;
+}
+      
+/* #messages li { 
+      padding: 5px 10px; 
+      display: block;
+} */
+
+/* #messages li:nth-child(even){
+      background-color: #ccc;
+}
+      
+#messages li:nth-child(odd) { 
+      background: #eee; 
+} */
+
+.side{
+      width: 23%;
+      float: left;
+      padding-left: 1%;
+      padding-right: 3%;
+      margin-right: 3%;
+      background-color: aqua;
+      height:90vh;
+}
+
+.main-section{
+      width:74%;
+      float: right;
+}
+
+.cont{
+      width: 90%;
+      margin: auto;
+}
+
+.paper{
+      color: white;
+}
+
+@media(max-width:1000px){
+      #msg-input{
+            width: 85%;
+      }
+}

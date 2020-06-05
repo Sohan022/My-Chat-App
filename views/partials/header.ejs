@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>myChatApp</title>
+        <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/semantic.min.css">
+        <link rel="stylesheet" type="text/css" href="/stylesheets/chat.css">
+        
+    </head>
+    <body>
+        <div class="ui inverted menu">
+            <div class="ui container">
+                <div class="header item"><i class="comment alternate outline icon"></i>MyChatApp</div>
+                <a class="item" href="/">Home</a>
+                <a class="item" href="#">New Room</a>
+                <div class="right menu">
+                    <% if(!currentUser){ %>
+                        <a class="item" href="/login">Login</a>
+                        <a class="item" href="/signup">Sign Up</a>
+                    <% } else{ %>
+                        <a class="item" id="currUser" href="#"><%=currentUser%></a>
+                        <a class="item" href="/logout">Logout</a>
+                    <% } %>
+                    
+                </div>
+            </div>
+        </div>
+        <div id="mainMargin">
+    
