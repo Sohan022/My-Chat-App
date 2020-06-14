@@ -1,0 +1,11 @@
+<div class="side">
+  
+        <p id="sidebar-heading"><a href="/index"><i class="arrow left icon" id="back-icon"></i></a><i class="users icon" id="users-icon"></i></p>
+ 
+    <div class="sidebar-content">
+        <% room.users.forEach( (user) => { %>
+            <a href="#"><h2><i class="user circle icon" id="user-icon"></i> <%= user.username %></h2></a>
+        <% }) %>
+    </div>
+    
+</div>

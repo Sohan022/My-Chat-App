@@ -3,21 +3,76 @@ i.icon{
   }
 
 #mainMargin{
-      margin-bottom: 3.0em;
+      padding-top: 60px;
 }
    
 .ui.menu {
-    position: sticky;
+    position: fixed;
+    width: 100%;
     top:0;
+    border-radius: 0;
 }
 
+#bkg{
+      padding-top:54px;
+      width: 100%;
+      height: 100vh;
+	background-image: url('../assets/backg.jpg');
+	background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+}
+
+#bkg div{
+      text-align: center;
+      color: rgb(13, 13, 37);
+      position: absolute;
+      left: 50%;
+      top:50%;
+      transform: translate(-50%, -50%)
+}
+
+#bkg div h1{
+      font-size: 40px;
+}
 
 /* * { 
       margin: 0; 
       padding: 0; 
       box-sizing: border-box; 
 } */
-      
+
+html,body{
+      overflow: hidden;
+      width: 100%;
+      height: 100%;
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+      background-image: url(../assets/89611db5a032e9447a6aefbbcd72e8a7--brushes-decoupage.jpg);
+}
+.ui.segment{
+      background: none;
+      color: white;
+}
+
+.ui.segment #input-field{
+      background: none;
+      outline-color: red;
+}
+
+.ui.segment #input-field::placeholder{
+      color: rgba(3, 1, 1, 0.356);
+}
+
+.ui.huge.header{
+      text-align: center;
+}
+
+#form-box{
+      padding-top: 100px;
+}
+
 body { 
       font: 13px Helvetica, Arial;
 }
@@ -25,8 +80,8 @@ body {
 #msg-form { 
       background: rgb(130, 138, 255); 
       padding: 3px; position: fixed; 
-      bottom: 1px; 
-      width: 69%;
+      bottom: 5px; 
+      width: 54%;
       border-radius: 20px 0 0 20px;
 }
       
@@ -37,9 +92,12 @@ body {
       font-size: 15px;
       width: 92%;
 }
-      
+   
+#msg-input:focus{
+      outline: none;
+}
+
 #msg-button {  
-      
       background: rgb(130, 138, 255); 
       border: none;
 }
@@ -62,7 +120,7 @@ body {
 .sender{
       width: 80%;
       float: right;
-      background-color: #ccc;
+      background-color: rgb(226, 215, 215);
       padding: 10px;
       border-radius: 30px;
       margin-bottom: 10px;
@@ -105,31 +163,140 @@ body {
 } */
 
 .side{
+      padding-top: 54px;
       width: 23%;
       float: left;
-      padding-left: 1%;
-      padding-right: 3%;
       margin-right: 3%;
       background-color: aqua;
-      height:90vh;
+      height:100%;
+      overflow: scroll;
+     
+}
+
+.side a{
+      color: white;
 }
 
 .main-section{
-      width:74%;
-      float: right;
+      padding-top: 54px;
+      width:65%;
+      float: left;
+      
+      
+}
+
+.for-scroll{
+      overflow: scroll;
+      height: 100%;
+      padding-right: 20px;
+      flex-direction: column-reverse;
+      display: flex;
+      margin-top: 110px;
+      padding-bottom: 150px;
 }
 
 .cont{
-      width: 90%;
+      width: 85%;
       margin: auto;
+      height: 100%;
 }
 
 .paper{
       color: white;
 }
 
-@media(max-width:1000px){
+.sidebar-content{
+      padding-left: 5%;
+      padding-right: 5%;
+}
+
+#welcome{
+      position: absolute;
+      left:64%;
+      top: 50%;               
+      transform: translate(-50%, -50%)
+}
+
+#room-heading{
+      text-align: center;
+      background-color: blue;
+      width: 53%;
+      padding: 0;
+      min-height: 50px;
+      font-size: 35px;
+      color: white;
+      position: fixed;
+      top:54px;
+}
+
+#sidebar-heading{
+      
+      background-color: blue;
+      width: 100%;
+      padding: 0;
+      min-height: 50px;
+      font-size: 20px;
+      color: white;
+      position: sticky;
+      top:0;
+      padding-top: 8px;
+}
+
+#back-icon{
+      
+      font-size: 20px;
+      float: left;
+}
+
+#users-icon{
+      padding-left: 23%;
+}
+
+#user-icon{
+      font-size: 25px;
+}
+
+#leave-icon{
+      float: right;
+      font-size: 20px;
+      color: white;
+}
+
+#join-button{
+      position: fixed;
+      bottom: 5px;
+      left: 50%;
+      justify-items: center;
+      font-size: large;
+}
+
+@media(max-width:1170px){
       #msg-input{
-            width: 85%;
+            width: 80%;
       }
+}
+
+@media(max-width:600px){
+      #msg-form{
+            width: 44%;
+      }
+      #msg-input{
+            width: 70%;
+      }
+      .main-section{
+            width: 55%;
+      }
+     
+}
+
+@media(max-width:1000px){
+      .side{
+            width: 150px;
+            /* display: none; */
+     }
+     #users-icon{
+           padding-left: 25px;
+     }
+
+
 }

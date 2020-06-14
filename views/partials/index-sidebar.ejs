@@ -1,0 +1,9 @@
+<div class="side">
+    <h2 id="room-heading"><span id="room-name">Groups</h2>
+    <div class="sidebar-content">
+        <% rooms.forEach( (room) => { %>
+            <a href="/room/<%=room._id%>"><h2><%= room.roomname %></h2></a>   
+        <% }) %>
+    </div>
+   
+</div>

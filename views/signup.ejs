@@ -1,16 +1,14 @@
 <%- include("partials/header") -%>
-
-<div class="ui main text container segment">
-    <div class="ui huge header">Sign Up</div>
-    <form class="ui form" action="/signup" method="POST">
-        <div class="field">
-            <label>Username</label>
-            <input type="text" name="name" placeholder="Username" required>
-        </div>
-        <button class="ui violet basic button">Sign Up</button>
-    </form>
+<div id="form-box">
+    <div class="ui main text container segment">
+        <div class="ui huge header">Sign Up</div>
+        <form class="ui form" action="/signup" method="POST">
+            <div class="field">
+                <label>Username</label>
+                <input id="input-field" type="text" name="username" placeholder="Username" autocomplete="off" required>
+            </div>
+            <button class="ui violet basic button">Sign Up</button>
+        </form>
+    </div>
 </div>
-
-</div>
-</body>
-</html>
+<%- include("partials/footer") -%>

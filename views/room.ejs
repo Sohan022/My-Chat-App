@@ -1,0 +1,14 @@
+<%- include("partials/header") -%>
+<div id="form-box">
+    <div class="ui main text container segment">
+        <div class="ui huge header">New Room</div>
+        <form class="ui form" action="/room" method="POST">
+            <div class="field">
+                <label>Room Name</label>
+                <input id="input-field" type="text" name="roomname" placeholder="Room Name" autocomplete="off" required>
+            </div>
+            <button class="ui violet basic button">Create New Room</button>
+        </form>
+    </div>
+</div>
+<%- include("partials/footer") -%>

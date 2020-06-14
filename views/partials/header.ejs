@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <title>myChatApp</title>
+        <title>MyChatApp</title>
         <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/semantic.min.css">
         <link rel="stylesheet" type="text/css" href="/stylesheets/chat.css">
         
@@ -11,7 +11,9 @@
             <div class="ui container">
                 <div class="header item"><i class="comment alternate outline icon"></i>MyChatApp</div>
                 <a class="item" href="/">Home</a>
-                <a class="item" href="#">New Room</a>
+                <% if(currentUser){ %>
+                    <a class="item" href="/room">New Room</a>
+                <% } %>
                 <div class="right menu">
                     <% if(!currentUser){ %>
                         <a class="item" href="/login">Login</a>
@@ -24,5 +26,4 @@
                 </div>
             </div>
         </div>
-        <div id="mainMargin">
     

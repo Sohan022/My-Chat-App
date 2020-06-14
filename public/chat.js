@@ -14,7 +14,9 @@ var socket = io();
 var msgForm = document.getElementById("msg-form");
 var messages = document.getElementById("messages");
 var msgInput = document.getElementById("msg-input");
-var currUser = document.getElementById('currUser');
+var mainSection = document.getElementsByClassName("main-section");
+// var hidroom = document.getElementById('hidroom');
+// var rmm = document.getElementById("roomsrc");
 
 msgForm.addEventListener('submit',(e) =>{
     e.preventDefault(); //prevents page reloading
@@ -23,6 +25,10 @@ msgForm.addEventListener('submit',(e) =>{
     msgInput.focus();
 });
 
+// console.log(rmm.textContent);
+// console.log(hidroom.value);
+socket.emit('joinRoom',{roomname:document.getElementById("room-name").textContent,user:document.getElementById("currUser").textContent});
+//  console.log(document.getElementById("room-name").textContent +"...."+ document.getElementById("currUser").textContent);
 socket.on('chat message',function(data){
     // var msg = "<strong>" + data.user + ": </strong>" + data.msg;
     // $('#messages').append($('<li>').text(msg));
@@ -36,6 +42,8 @@ socket.on('chat message',function(data){
     
     // item.innerHTML = "<strong>" + data.user + ": </strong>" + data.msg;
     messages.appendChild(item);
-    window.scrollTo(0,document.body.scrollHeight);
+    
+    
+    // window.scrollTo(0,mainSection.scrollHeight);
 });
 

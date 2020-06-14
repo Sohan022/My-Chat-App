@@ -1,0 +1,54 @@
+<%- include("partials/header") -%>
+
+<div class="cont">
+  <%- include("partials/chat-sidebar") -%>
+
+  <div class="main-section for-scroll" >
+    <h2 id="room-heading"><span id="room-name"><%=room.roomname%></span>
+      <% if(isJoined){ %>
+        <a href="/room/<%=room._id%>/<%=userId%>/leave"><i class="sign out alternate icon" id="leave-icon"></i></a>
+      <% } %>
+    </h2>
+      <ul id="messages">
+        <% if(room.messages.length){ %>
+          <% room.messages.forEach( (msg) => { %>
+            <li>
+              <% if(msg.author.username == currentUser){ %>
+                <div class='sender'>
+                   <p class='user-info'>
+                     <strong> <%= msg.author.username %></strong> <span class='time'><%= msg.time %></span> 
+                    </p> 
+                    <p class='msg-content'>
+                      <%= msg.text %>
+                    </p>
+                  </div>
+              <%} else {%>
+                <div class='receiver'>
+                  <p class='user-info'>
+                    <strong><%= msg.author.username %></strong> <span class='time'><%= msg.time %></span> 
+                  </p> 
+                  <p class='msg-content'>
+                    <%= msg.text %>
+                  </p>
+                </div>
+              <% } %>
+            </li>
+          <% }) %>
+        <% } %>
+      </ul>
+      <% if(isJoined){ %>
+        <form id="msg-form" action="">
+            <input id="msg-input" autocomplete="off" placeholder="Type Message"/>
+            <button id="msg-button"><i class="paper plane icon"></i></button>
+        </form>
+        <% }else{ %>
+            <a href="/room/<%= room._id%>/joinchat" class="ui blue button" id="join-button">Join Chat</a>
+        <% } %>
+     
+  </div>
+</div>
+
+
+  
+
+<%- include("partials/chat-footer") -%>
