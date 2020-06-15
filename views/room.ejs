@@ -28,23 +28,28 @@
            
                 <div class="field" id="roompass">
                     <label>Room Password</label>
-                    <input id="input-field" type="password" name="roompass" placeholder="Room Password" autocomplete="off" required>
+                    <input id="input-field" type="password" name="roompass" placeholder="Room Password" autocomplete="off">
                 </div>
           
             <button class="ui violet basic button">Create New Room</button>
         </form>
     </div>
 </div>
-
+<script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
 <script>
     var prv = document.getElementById('prv');
     var rp = document.getElementById('roompass');
     var pub = document.getElementById('pub');
+
     prv.addEventListener('click', () => {
+        $("[name='roompass']").attr("required",true);
         rp.style.display = "block";
+        
+        
     })
     pub.addEventListener('click', () => {
         rp.style.display = "none";
+        $("[name='roompass']").attr("required",false);
     })
     if(pub.value == 'public'){
         rp.style.display = "none";
