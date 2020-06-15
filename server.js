@@ -38,6 +38,11 @@ app.use((req,res,next) => {
     next();
 }); 
 
+var server = app.listen(3000, () => {
+    console.log('Server has started...');
+});
+
+
 var io = socket(server);
 var myMap = new Map();
 io.on('connection', (socket) => {
@@ -69,6 +74,3 @@ io.on('connection', (socket) => {
 app.use(indexRoutes);
 app.use(roomRoutes);
 
-var server = app.listen(3000, () => {
-    console.log('Server has started...');
-});

@@ -1,4 +1,3 @@
-
 var socket = io();
 
 var msgForm = document.getElementById("msg-form");
