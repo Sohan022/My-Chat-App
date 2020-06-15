@@ -69,6 +69,10 @@ i.icon{
       text-align: center;
 }
 
+*{
+      z-index: 2;
+}
+
 #form-box{
       padding-top: 60px;
 }
@@ -214,6 +218,7 @@ body {
       color: white;
       position: fixed;
       top:54px;
+      z-index: 1;
 }
 
 #sidebar-heading{
