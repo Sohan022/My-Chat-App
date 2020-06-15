@@ -1,0 +1,12 @@
+<div class="flash-cont">
+    <% if(error && error.length > 0){ %>
+        <div class="ui brown message">
+            <%= error %>
+        </div>
+    <% } %>
+    <% if(success && success.length > 0){ %>
+        <div class="ui violet message">
+            <%= success %>
+        </div>
+    <% } %>
+</div>

@@ -1,0 +1,24 @@
+<%- include("partials/header") -%>
+
+<%- include("partials/flash-message") -%>
+
+<div id="form-box">
+    <div class="ui main text container segment">
+        <div class="ui huge header">Join Private Room</div>
+        <form class="ui form" action="/joinPrivate" method="POST">
+            <div class="field">
+                <label>Room Name</label>
+                <input id="input-field" type="text" name="roomname" placeholder="Room Name" autocomplete="off" required>
+            </div>
+           
+            <div class="field" id="roompass">
+                <label>Room Password</label>
+                <input id="input-field" type="password" name="roompass" placeholder="Room Password" autocomplete="off" required>
+            </div>
+          
+            <button class="ui violet basic button">Join Room</button>
+        </form>
+    </div>
+</div>
+
+<%- include("partials/footer") -%>

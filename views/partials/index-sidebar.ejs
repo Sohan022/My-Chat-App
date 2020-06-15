@@ -1,8 +1,16 @@
 <div class="side">
-    <h2 id="room-heading"><span id="room-name">Groups</h2>
+    <h1 id="sidebar-heading"><span id="groups">Groups</h1>
     <div class="sidebar-content">
         <% rooms.forEach( (room) => { %>
-            <a href="/room/<%=room._id%>"><h2><%= room.roomname %></h2></a>   
+           <% if(room.isPublic == "private"){ %>
+                <% const result = room.users.filter(userId => userId == currentUserId); %>
+               <% if(result.length > 0){ %>
+                    <a href="/room/<%=room._id%>"><h2><%= room.roomname %> <i class="lock icon" id="lock-icon"></i></h2></a>
+               <% } %>
+            <% } else{ %>
+                <a href="/room/<%=room._id%>"><h2><%= room.roomname %></h2></a> 
+            <% } %>
+              
         <% }) %>
     </div>
    

@@ -69,8 +69,13 @@ html,body{
       text-align: center;
 }
 
+.ui.violet.message, .ui.brown.message{
+      background: none;
+      text-align: center;
+}
+
 #form-box{
-      padding-top: 100px;
+      padding-top: 60px;
 }
 
 body { 
@@ -217,6 +222,15 @@ body {
       transform: translate(-50%, -50%)
 }
 
+#groups{
+      font-size: 30px;
+     
+}
+
+.side h1{
+      text-align: center;
+}
+
 #room-heading{
       text-align: center;
       background-color: blue;
@@ -240,6 +254,7 @@ body {
       position: sticky;
       top:0;
       padding-top: 8px;
+      z-index: 0;
 }
 
 #back-icon{
@@ -262,6 +277,16 @@ body {
       color: white;
 }
 
+#lock-icon{
+      font-size: 16px;
+}
+
+.flash-cont{
+      width: 60%;
+      margin: 0 auto;
+      padding-top: 60px;
+}
+
 #join-button{
       position: fixed;
       bottom: 5px;
@@ -273,6 +298,9 @@ body {
 @media(max-width:1170px){
       #msg-input{
             width: 80%;
+      }
+      .flash-cont{
+            width: 70%;
       }
 }
 
@@ -286,7 +314,6 @@ body {
       .main-section{
             width: 55%;
       }
-     
 }
 
 @media(max-width:1000px){
@@ -297,6 +324,9 @@ body {
      #users-icon{
            padding-left: 25px;
      }
-
+     .flash-cont{
+           width: 80%;
+     }
 
 }
+

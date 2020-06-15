@@ -1,4 +1,7 @@
 <%- include("partials/header") -%>
+
+<%- include("partials/flash-message") -%>
+
 <div id="form-box">
     <div class="ui main text container segment">
         <div class="ui huge header">New Room</div>
@@ -7,8 +10,44 @@
                 <label>Room Name</label>
                 <input id="input-field" type="text" name="roomname" placeholder="Room Name" autocomplete="off" required>
             </div>
+            <div class="inline fields">
+                <label>Make Your Room: </label>
+                <div class="field">
+                  <div class="ui radio checkbox">
+                    <input id="pub" type="radio" name="isPublic" value="public" checked>
+                    <label>Public</label>
+                  </div>
+                </div>
+                <div class="field">
+                  <div class="ui radio checkbox">
+                    <input id="prv" type="radio" name="isPublic" value="private">
+                    <label>Private</label>
+                  </div>
+                </div>
+            </div>
+           
+                <div class="field" id="roompass">
+                    <label>Room Password</label>
+                    <input id="input-field" type="password" name="roompass" placeholder="Room Password" autocomplete="off" required>
+                </div>
+          
             <button class="ui violet basic button">Create New Room</button>
         </form>
     </div>
 </div>
+
+<script>
+    var prv = document.getElementById('prv');
+    var rp = document.getElementById('roompass');
+    var pub = document.getElementById('pub');
+    prv.addEventListener('click', () => {
+        rp.style.display = "block";
+    })
+    pub.addEventListener('click', () => {
+        rp.style.display = "none";
+    })
+    if(pub.value == 'public'){
+        rp.style.display = "none";
+    }
+</script>
 <%- include("partials/footer") -%>

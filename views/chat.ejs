@@ -4,7 +4,12 @@
   <%- include("partials/chat-sidebar") -%>
 
   <div class="main-section for-scroll" >
-    <h2 id="room-heading"><span id="room-name"><%=room.roomname%></span>
+      <% if(room.isPublic == "private"){ %>
+        <h2 id="room-heading"><span id="room-name"><%=room.roomname%></span> <i class="lock icon" id="lock-icon"></i>
+      <% }else{ %>
+        <h2 id="room-heading"><span id="room-name"><%=room.roomname%></span>
+      <% } %>
+    
       <% if(isJoined){ %>
         <a href="/room/<%=room._id%>/<%=userId%>/leave"><i class="sign out alternate icon" id="leave-icon"></i></a>
       <% } %>

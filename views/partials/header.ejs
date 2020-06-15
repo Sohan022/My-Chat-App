@@ -7,12 +7,18 @@
         
     </head>
     <body>
-        <div class="ui inverted menu">
+        <div class="ui inverted menu navbar">
             <div class="ui container">
                 <div class="header item"><i class="comment alternate outline icon"></i>MyChatApp</div>
                 <a class="item" href="/">Home</a>
+                
                 <% if(currentUser){ %>
-                    <a class="item" href="/room">New Room</a>
+                    <div class=" ui simple inline dropdown item">Options<i class="dropdown icon"></i>
+                        <div class="menu">
+                            <a class="item" href="/room">Make New Room</a>
+                            <a class="item" href="/joinPrivate">Join Private Room</a>
+                        </div>
+                    </div>
                 <% } %>
                 <div class="right menu">
                     <% if(!currentUser){ %>
@@ -26,4 +32,4 @@
                 </div>
             </div>
         </div>
-    
+        

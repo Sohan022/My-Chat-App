@@ -2,6 +2,8 @@ var mongoose = require("mongoose");
 
 var roomSchema = new mongoose.Schema({
     roomname:String,
+    isPublic:String,
+    roompass:String,
     users:[{
         type: mongoose.Schema.Types.ObjectId,
         ref: "User"
