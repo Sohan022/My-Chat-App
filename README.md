@@ -32,5 +32,9 @@ This project was creating using HTML, CSS, Semantic UI, JS, Node.js, Express, Mo
 ```
 * open web browser *http://localhost:3000/*
 
+## LICENSE
+
+[MIT License](https://github.com/Sohan022/My-Chat-App/blob/master/LICENSE.md)
+
 
 
