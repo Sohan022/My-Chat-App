@@ -1,5 +1,12 @@
 # My-Chat-App
 
+![alt text](https://github.com/Sohan022/My-Chat-App/blob/master/Demo/Landing_Page.jpg)
+
+![alt text](https://github.com/Sohan022/My-Chat-App/blob/master/Demo/chat.jpg)
+
+![alt text](https://github.com/Sohan022/My-Chat-App/blob/master/Demo/all_group.jpg)
+[See more images](https://github.com/Sohan022/My-Chat-App/blob/master/Demo)
+
 ```
 It is a web application where users can chat into public/private groups.
 
