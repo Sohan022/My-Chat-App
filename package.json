@@ -6,7 +6,7 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "author": "",
+  "author": "Sohan Lal Gupta",
   "license": "MIT License",
   "dependencies": {
     "bcryptjs": "^2.4.3",
