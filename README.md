@@ -11,7 +11,7 @@
 ```
 It is a web application where users can chat into public/private groups.
 
-This project was creating using HTML, CSS, Semantic UI, JS, Node.js, Express, MongoDB, Socket.io.
+This project has created using HTML, CSS, Semantic UI, JS, Node.js, Express, MongoDB, Socket.io.
 ```
 
 ## Features
