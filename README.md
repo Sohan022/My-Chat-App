@@ -1,10 +1,11 @@
 # My-Chat-App
 
-![alt text](https://github.com/Sohan022/My-Chat-App/blob/master/Demo/Landing_Page.jpg)
+<kbd>![alt text](https://github.com/Sohan022/My-Chat-App/blob/master/Demo/Landing_Page.jpg)</kbd>
 
-![alt text](https://github.com/Sohan022/My-Chat-App/blob/master/Demo/chat.jpg)
+<kbd>![alt text](https://github.com/Sohan022/My-Chat-App/blob/master/Demo/chat.jpg)</kbd>
 
-![alt text](https://github.com/Sohan022/My-Chat-App/blob/master/Demo/all_group.jpg)
+<kbd>![alt text](https://github.com/Sohan022/My-Chat-App/blob/master/Demo/all_group.jpg)</kbd>
+
 [See more images](https://github.com/Sohan022/My-Chat-App/blob/master/Demo)
 
 ```
